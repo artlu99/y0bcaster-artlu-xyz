@@ -11,6 +11,7 @@
     "preview": "yarn build && yarn vite preview"
   },
   "dependencies": {
+    "@remixicon/react": "^4.2.0",
     "preact": "^10.22.0",
     "zustand": "^4.5.4"
   },
