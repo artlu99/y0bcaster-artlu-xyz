@@ -1,13 +1,12 @@
-import { Suspense } from 'preact/compat'
-import UserCount from 'components/UserCount'
+import { Blurb } from 'components/Blurb'
+import { LiteClientLink } from 'components/LiteClientLink'
 
 export default function () {
   return (
     <div className="container mx-auto max-w-prose p-10 prose">
-      <h1>Frontend template</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <UserCount />
-      </Suspense>
+      <Blurb />
+      <h1>Redirecting in 3 seconds...</h1>
+      <LiteClientLink />
     </div>
   )
 }
