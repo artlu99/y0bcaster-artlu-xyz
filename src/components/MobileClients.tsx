@@ -9,16 +9,24 @@ export const MobileClients = () => {
   return (
     <>
       <p>
-        <a href={warpcastMobileUrl()}>Warpcast</a>
+        <a className="link link-hover" href={warpcastMobileUrl()}>
+          Warpcast
+        </a>
       </p>
       <p>
-        <a href={recasterUrl()}>Recaster</a>
+        <a className="link link-hover" href={recasterUrl()}>
+          Recaster
+        </a>
       </p>
       <p>
-        <a href={farquestProUrl()}>far.quest Pro</a>
+        <a className="link link-hover" href={farquestProUrl()}>
+          far.quest Pro
+        </a>
       </p>
       <p>
-        <a href={liteClientUrl()}>BCBHShow Lite Client 🌟</a>
+        <a className="link link-hover" href={liteClientUrl()}>
+          BCBHShow Lite Client 🌟
+        </a>
       </p>
     </>
   )

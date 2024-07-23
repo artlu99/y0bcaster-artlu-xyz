@@ -9,16 +9,24 @@ export const DesktopClients = () => {
   return (
     <>
       <p>
-        <a href={warpcastDesktopUrl()}>Warpcast</a>
+        <a className="link link-hover" href={warpcastDesktopUrl()}>
+          Warpcast
+        </a>
       </p>
       <p>
-        <a href={supercastUrl()}>supercast</a>
+        <a className="link link-hover" href={supercastUrl()}>
+          supercast
+        </a>
       </p>
       <p>
-        <a href={herocastUrl()}>Herocast</a>
+        <a className="link link-hover" href={herocastUrl()}>
+          Herocast
+        </a>
       </p>
       <p>
-        <a href={liteClientUrl()}>BCBHShow Lite Client 🌟</a>
+        <a className="link link-hover" href={liteClientUrl()}>
+          BCBHShow Lite Client 🌟
+        </a>
       </p>
     </>
   )
