@@ -70,34 +70,34 @@ export const clientsList: ClientGridItemProps[] = [
   {
     id: 8,
     title: 'Wildcard',
-    url: 'https://wildcard.lol',
+    url: 'https://app.wildcard.lol',
     pfpUrl: 'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/68657e2d-ded8-4bd2-bca2-03779668ac00/original',
     type: 'desktop',
   },
   {
     id: 9,
     title: 'Wildcard',
-    url: 'https://wildcard.lol',
+    url: 'wildcard://',
     pfpUrl: 'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/68657e2d-ded8-4bd2-bca2-03779668ac00/original',
     type: 'mobile',
   },
   {
     id: 10,
     title: 'Firefly',
-    url: 'https://firefly.social/',
+    url: 'https://firefly.mask.social',
     pfpUrl: 'https://i.imgur.com/NfzIpwa.jpg',
     type: 'desktop',
   },
   {
     id: 11,
     title: 'Firefly',
-    url: 'https://firefly.social/',
+    url: 'firefly://',
     pfpUrl: 'https://i.imgur.com/NfzIpwa.jpg',
     type: 'mobile',
   },
   {
     id: 12,
-    title: 'Degencast',
+    title: 'degencast',
     url: 'https://dev.degencast.wtf/',
     pfpUrl: 'https://i.imgur.com/qLrLl4y.png',
     type: 'desktop',
@@ -105,7 +105,7 @@ export const clientsList: ClientGridItemProps[] = [
   {
     id: 13,
     title: 'Degencast',
-    url: 'https://dev.degencast.wtf/',
+    url: 'degencast://', 
     pfpUrl: 'https://i.imgur.com/qLrLl4y.png',
     type: 'mobile',
   }
