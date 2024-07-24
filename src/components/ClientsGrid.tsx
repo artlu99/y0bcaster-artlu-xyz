@@ -15,7 +15,7 @@ export const ClientsGrid: React.FC<ClientsGridProps> = (props) => {
   return (
     <div class="grid grid-cols-2 gap-4">
       {gridItems.map((client, i) => (
-        <div key={`${i}-${client.id}`} className="artboard artboard-demo ">
+        <div key={`${i}-${client.title}`} className="artboard artboard-demo ">
           <a
             className="link link-hover"
             href={client.url}
@@ -27,11 +27,11 @@ export const ClientsGrid: React.FC<ClientsGridProps> = (props) => {
               <img
                 className="rounded-lg"
                 src={client.pfpUrl}
-                alt={client.id}
+                alt={client.title}
                 height={clientPfpSquareSize}
                 width={clientPfpSquareSize}
               />
-              {client.id}
+              {client.title}
               {client.id === last ? (
                 <span className="indicator-item badge badge-secondary">
                   last used

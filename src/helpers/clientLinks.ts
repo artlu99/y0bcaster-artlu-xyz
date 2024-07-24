@@ -1,55 +1,70 @@
 export interface ClientGridItemProps {
-  id: string
+  id: number
+  title: string
   url: string
   pfpUrl: string
+  type: 'desktop' | 'mobile'
 }
 
-export const desktopClients: ClientGridItemProps[] = [
+export const clientsList: ClientGridItemProps[] = [
   {
-    id: 'warpcast',
+    id: 0,
+    title: 'warpcast',
     url: 'https://warpcast.com/',
     pfpUrl: 'https://i.imgur.com/3d6fFAI.png',
+    type: 'desktop',
   },
   {
-    id: 'supercast',
+    id: 4,
+    title: 'supercast',
     url: 'https://supercast.xyz/',
     pfpUrl: 'https://www.supercast.xyz/supercast-logo-black.png',
+    type: 'desktop',
   },
   {
-    id: 'herocast',
+    id: 3,
+    title: 'herocast',
     url: 'https://app.herocast.xyz/feeds',
     pfpUrl:
       'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/41ca8e4a-6129-40be-de09-c93fbfbc6400/original',
+    type: 'desktop',
   },
   {
-    id: 'BCBHShow Lite Client 🌟',
+    id: 6,
+    title: 'BCBHShow Lite Client 🌟',
     url: 'https://client-bcbhshow.artlu.xyz/',
     pfpUrl:
       'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9d483fd3-b92b-4bcb-c8f0-95791501d500/original',
+    type: 'desktop',
   },
-]
-
-export const mobileClients: ClientGridItemProps[] = [
   {
-    id: 'Warpcast',
+    id: 1,
+    title: 'Warpcast',
     url: 'farcaster://',
     pfpUrl: 'https://i.imgur.com/3d6fFAI.png',
+    type: 'mobile',
   },
   {
-    id: 'Recaster',
+    id: 5,
+    title: 'Recaster',
     url: 'recaster://',
     pfpUrl:
       'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/2b83f727-02be-4ff2-c743-ccc5e0390500/original',
+    type: 'mobile',
   },
   {
-    id: 'far.quest',
+    id: 2,
+    title: 'far.quest',
     url: 'farquest://',
     pfpUrl: 'https://i.imgur.com/ZgW9WB7.jpg',
+    type: 'mobile',
   },
   {
-    id: 'BCBHShow Lite Client 🌟',
+    id: 7,
+    title: 'BCBHShow Lite Client 🌟',
     url: 'https://client-bcbhshow.artlu.xyz/',
     pfpUrl:
       'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9d483fd3-b92b-4bcb-c8f0-95791501d500/original',
+    type: 'mobile',
   },
 ]
