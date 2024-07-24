@@ -5,29 +5,21 @@ import {
   warpcastMobileUrl,
 } from 'helpers/clientLinks'
 
+const renderLink = (text: string, url: string) => (
+  <p>
+    <a className="link link-hover" href={url}>
+      {text}
+    </a>
+  </p>
+)
+
 export const MobileClients = () => {
   return (
     <>
-      <p>
-        <a className="link link-hover" href={warpcastMobileUrl()}>
-          Warpcast
-        </a>
-      </p>
-      <p>
-        <a className="link link-hover" href={recasterUrl()}>
-          Recaster
-        </a>
-      </p>
-      <p>
-        <a className="link link-hover" href={farquestProUrl()}>
-          far.quest Pro
-        </a>
-      </p>
-      <p>
-        <a className="link link-hover" href={liteClientUrl()}>
-          BCBHShow Lite Client 🌟
-        </a>
-      </p>
+      {renderLink('Warpcast', warpcastMobileUrl())}
+      {renderLink('Recaster', recasterUrl())}
+      {renderLink('far.quest Pro', farquestProUrl())}
+      {renderLink('BCBHShow Lite Client 🌟', liteClientUrl())}
     </>
   )
 }
