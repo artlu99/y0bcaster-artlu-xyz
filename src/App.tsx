@@ -13,9 +13,6 @@ export default function () {
     setShowMobile(isMobile)
   }, [isMobile])
 
-  console.log('showMobile:', showMobile)
-  console.log('isMobile:', isMobile)
-
   return (
     <>
       <UserBar showMobile={showMobile} setShowMobile={setShowMobile} />
