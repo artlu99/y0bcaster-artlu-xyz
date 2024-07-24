@@ -13,7 +13,7 @@ export const ClientsGrid: React.FC<ClientsGridProps> = (props) => {
   const { last, setLast } = useStateStore()
 
   return (
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {gridItems.map((client, i) => (
         <div key={`${i}-${client.title}`} className="artboard artboard-demo ">
           <a
