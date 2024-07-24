@@ -71,15 +71,9 @@ export const clientsList: ClientGridItemProps[] = [
     id: 8,
     title: 'Wildcard',
     url: 'https://app.wildcard.lol',
-    pfpUrl: 'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/68657e2d-ded8-4bd2-bca2-03779668ac00/original',
+    pfpUrl:
+      'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/68657e2d-ded8-4bd2-bca2-03779668ac00/original',
     type: 'desktop',
-  },
-  {
-    id: 9,
-    title: 'Wildcard',
-    url: 'wildcard://',
-    pfpUrl: 'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/68657e2d-ded8-4bd2-bca2-03779668ac00/original',
-    type: 'mobile',
   },
   {
     id: 10,
@@ -102,11 +96,4 @@ export const clientsList: ClientGridItemProps[] = [
     pfpUrl: 'https://i.imgur.com/qLrLl4y.png',
     type: 'desktop',
   },
-  {
-    id: 13,
-    title: 'Degencast',
-    url: 'degencast://', 
-    pfpUrl: 'https://i.imgur.com/qLrLl4y.png',
-    type: 'mobile',
-  }
 ]
