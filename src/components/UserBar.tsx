@@ -8,18 +8,18 @@ import {
 } from '@remixicon/react'
 
 interface UserBarProps {
-  isMobile: boolean
-  setIsMobile: Dispatch<SetStateAction<boolean>>
+  showMobile: boolean
+  setShowMobile: Dispatch<SetStateAction<boolean>>
 }
-export const UserBar: FC<UserBarProps> = ({ isMobile, setIsMobile }) => {
+export const UserBar: FC<UserBarProps> = ({ showMobile, setShowMobile }) => {
   const username = 'y0b'
   return (
     <>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="tooltip mx-2" data-tip="mobile">
-            <button onClick={() => setIsMobile(true)}>
-              {isMobile ? <RiSmartphoneFill /> : <RiSmartphoneLine />}
+            <button onClick={() => setShowMobile(true)}>
+              {showMobile ? <RiSmartphoneFill /> : <RiSmartphoneLine />}
             </button>
           </div>
         </div>
@@ -42,8 +42,8 @@ export const UserBar: FC<UserBarProps> = ({ isMobile, setIsMobile }) => {
         </div>
         <div className="navbar-end">
           <div className="tooltip mx-5" data-tip="desktop">
-            <button onClick={() => setIsMobile(false)}>
-              {isMobile ? <RiComputerLine /> : <RiComputerFill />}
+            <button onClick={() => setShowMobile(false)}>
+              {showMobile ? <RiComputerLine /> : <RiComputerFill />}
             </button>
           </div>
         </div>
