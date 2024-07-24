@@ -14,7 +14,7 @@ export const useStateStore = create<ZustandState>()(
     (set) => ({
       last: undefined,
       setLast: (lastId) => set(() => ({ last: lastId })),
-      selected: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      selected: [0, 1, 2, 3, 4, 5, 6, 7],
       select: (id) =>
         set((state) => ({ selected: [...state.selected, id].slice().sort() })),
       deselect: (id) =>

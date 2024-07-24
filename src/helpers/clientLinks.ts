@@ -67,4 +67,46 @@ export const clientsList: ClientGridItemProps[] = [
       'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9d483fd3-b92b-4bcb-c8f0-95791501d500/original',
     type: 'mobile',
   },
+  {
+    id: 8,
+    title: 'Wildcard',
+    url: 'https://wildcard.lol',
+    pfpUrl: 'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/68657e2d-ded8-4bd2-bca2-03779668ac00/original',
+    type: 'desktop',
+  },
+  {
+    id: 9,
+    title: 'Wildcard',
+    url: 'https://wildcard.lol',
+    pfpUrl: 'https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/68657e2d-ded8-4bd2-bca2-03779668ac00/original',
+    type: 'mobile',
+  },
+  {
+    id: 10,
+    title: 'Firefly',
+    url: 'https://firefly.social/',
+    pfpUrl: 'https://i.imgur.com/NfzIpwa.jpg',
+    type: 'desktop',
+  },
+  {
+    id: 11,
+    title: 'Firefly',
+    url: 'https://firefly.social/',
+    pfpUrl: 'https://i.imgur.com/NfzIpwa.jpg',
+    type: 'mobile',
+  },
+  {
+    id: 12,
+    title: 'Degencast',
+    url: 'https://dev.degencast.wtf/',
+    pfpUrl: 'https://i.imgur.com/qLrLl4y.png',
+    type: 'desktop',
+  },
+  {
+    id: 13,
+    title: 'Degencast',
+    url: 'https://dev.degencast.wtf/',
+    pfpUrl: 'https://i.imgur.com/qLrLl4y.png',
+    type: 'mobile',
+  }
 ]
