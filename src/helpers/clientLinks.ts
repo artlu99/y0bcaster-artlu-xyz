@@ -1,6 +1,6 @@
 export const liteClientUrl = () => 'https://client-bcbhshow.artlu.xyz/'
 export const supercastUrl = () => 'https://supercast.xyz/'
-export const herocastUrl = () => 'https://app.herocast.xyz/'
+export const herocastUrl = () => 'https://app.herocast.xyz/feeds'
 export const warpcastDesktopUrl = () => 'https://warpcast.com/'
 
 export const warpcastMobileUrl = () => 'farcaster://'
