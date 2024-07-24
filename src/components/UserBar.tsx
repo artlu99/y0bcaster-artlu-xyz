@@ -17,7 +17,7 @@ export const UserBar: FC<UserBarProps> = ({ showMobile, setShowMobile }) => {
     <>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
-          <div className="tooltip mx-2" data-tip="mobile">
+          <div className="tooltip tooltip-bottom mx-2" data-tip="mobile">
             <button onClick={() => setShowMobile(true)}>
               {showMobile ? <RiSmartphoneFill /> : <RiSmartphoneLine />}
             </button>
@@ -41,7 +41,7 @@ export const UserBar: FC<UserBarProps> = ({ showMobile, setShowMobile }) => {
           </div>
         </div>
         <div className="navbar-end">
-          <div className="tooltip mx-5" data-tip="desktop">
+          <div className="tooltip tooltip-bottom mx-5" data-tip="desktop">
             <button onClick={() => setShowMobile(false)}>
               {showMobile ? <RiComputerLine /> : <RiComputerFill />}
             </button>

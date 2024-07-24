@@ -1,6 +1,8 @@
 import { ClientGridItemProps } from 'helpers/clientLinks'
 import React from 'preact/compat'
 
+const clientPfpSquareSize = 80
+
 interface ClientsGridProps {
   gridItems: ClientGridItemProps[]
 }
@@ -22,8 +24,8 @@ export const ClientsGrid: React.FC<ClientsGridProps> = (props) => {
                 className="rounded-lg"
                 src={client.imgUrl}
                 alt={client.text}
-                height={50}
-                width={50}
+                height={clientPfpSquareSize}
+                width={clientPfpSquareSize}
               />
               {client.text}
             </div>
