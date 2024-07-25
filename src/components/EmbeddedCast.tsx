@@ -9,7 +9,7 @@ export const EmbeddedCast: React.FC<EmbeddedCastProps> = (props) => {
 
   return (
     <div className="container mx-auto flex justify-center">
-      <div className="artboard phone-2">
+      <div className="artboard phone-2 overflow-auto">
         <FarcasterEmbed url={href} />
       </div>
     </div>
