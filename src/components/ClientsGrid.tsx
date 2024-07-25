@@ -1,6 +1,5 @@
 import { ClientGridItemProps } from 'helpers/clientLinks'
 import { useStateStore } from 'helpers/stores/zustand'
-import React from 'preact/compat'
 
 const clientPfpSquareSize = 80
 

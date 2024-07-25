@@ -349,6 +349,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cloudflare/workers-types@npm:^4.20240722.0":
+  version: 4.20240722.0
+  resolution: "@cloudflare/workers-types@npm:4.20240722.0"
+  checksum: 10c0/2e720d1c06afb523e54ea93f7d458af12bd59f0557b96ba441d22e68038e1c3d0571d1d7f1db8d3af579befaa709a92ef21b596657626a445f75698853bd9055
+  languageName: node
+  linkType: hard
+
 "@cspotcode/source-map-support@npm:^0.8.0":
   version: 0.8.1
   resolution: "@cspotcode/source-map-support@npm:0.8.1"
@@ -5629,7 +5636,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^5.4.5":
+"typescript@npm:^5.5.4":
   version: 5.5.4
   resolution: "typescript@npm:5.5.4"
   bin:
@@ -5639,7 +5646,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A^5.5.4#optional!builtin<compat/typescript>":
   version: 5.5.4
   resolution: "typescript@patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=b45daf"
   bin:
@@ -6033,6 +6040,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "y0bcaster-artlu-xyz@workspace:."
   dependencies:
+    "@cloudflare/workers-types": "npm:^4.20240722.0"
     "@farcaster/auth-kit": "npm:^0.3.1"
     "@preact/preset-vite": "npm:^2.8.2"
     "@remixicon/react": "npm:^4.2.0"
@@ -6062,7 +6070,7 @@ __metadata:
     rollup-plugin-visualizer: "npm:^5.12.0"
     tailwindcss: "npm:^3.4.3"
     ts-node: "npm:^10.9.2"
-    typescript: "npm:^5.4.5"
+    typescript: "npm:^5.5.4"
     viem: "npm:^2.18.0"
     vite: "npm:^5.2.12"
     vite-tsconfig-paths: "npm:^4.3.2"
