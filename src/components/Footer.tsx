@@ -2,12 +2,7 @@ import { Link, useLocation } from 'wouter'
 
 import { SignInButton, useProfile, useSignIn } from '@farcaster/auth-kit'
 
-import {
-  RiGithubLine,
-  RiHome2Line,
-  RiTelegramLine,
-  RiTwitterXLine,
-} from '@remixicon/react'
+import { RiGithubLine, RiTelegramLine, RiTwitterXLine } from '@remixicon/react'
 
 export const Footer = () => {
   const [location] = useLocation()
@@ -43,25 +38,18 @@ export const Footer = () => {
         <nav>
           {isBaseUrl ? (
             <>
-              <h6 className="footer-title">Sign In to Personalize</h6>
               {!isAuthenticated ? (
-                <SignInButton hideSignOut={true} />
+                <>
+                  <h6 className="footer-title">Sign In to Personalize</h6>
+                  <SignInButton hideSignOut={true} />
+                </>
               ) : (
                 <button className="btn btn-neutral" onClick={() => signOut()}>
                   Sign out
                 </button>
               )}
             </>
-          ) : (
-            <>
-              <h6 className="footer-title">Home</h6>
-              <Link className="link link-hover" href="/">
-                <div className="tooltip" data-tip="Home">
-                  <RiHome2Line />
-                </div>
-              </Link>
-            </>
-          )}
+          ) : null}
         </nav>
       </footer>
       <footer className="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">

@@ -1,16 +1,23 @@
 import {
   RiComputerFill,
   RiComputerLine,
+  RiHome2Line,
   RiSmartphoneFill,
   RiSmartphoneLine,
 } from '@remixicon/react'
+import { Link, useLocation } from 'wouter'
+
 import { useStateStore } from 'helpers/stores/zustand'
 import { SelectorModal } from './SelectorModal'
 
 export const UserBar = () => {
+  const [location] = useLocation()
+  const isBaseUrl = location === '/'
+
   const { showMobile, setShowMobile } = useStateStore()
 
   const username = 'y0b'
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -21,21 +28,29 @@ export const UserBar = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <div role="button" className="btn btn-ghost btn-circle avatar mx-1">
-          <div className="w-24 rounded-full">
-            <a
-              href={'https://seemore.tv/free/fc/y0b'}
-              alt="profile"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={'https://i.imgur.com/jHTn4Qp.jpg'}
-                alt={`@${username}`}
-              />
-            </a>
+        {isBaseUrl ? (
+          <div role="button" className="btn btn-ghost btn-circle avatar mx-1">
+            <div className="w-24 rounded-full">
+              <a
+                href={'https://seemore.tv/free/fc/y0b'}
+                alt="profile"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src={'https://i.imgur.com/jHTn4Qp.jpg'}
+                  alt={`@${username}`}
+                />
+              </a>
+            </div>
           </div>
-        </div>
+        ) : (
+          <Link className="link link-hover" href="/">
+            <div className="tooltip" data-tip="Home">
+              <RiHome2Line />
+            </div>
+          </Link>
+        )}
       </div>
       <div className="navbar-end">
         <div className="tooltip tooltip-bottom mx-5" data-tip="settings">
