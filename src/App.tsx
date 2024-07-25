@@ -1,35 +1,42 @@
-import { useEffect, useState } from 'preact/hooks'
+import { useEffect } from 'preact/hooks'
 import { isMobile } from 'react-device-detect'
+import { Route, Switch } from 'wouter'
 
-import { ClientsGrid } from 'components/ClientsGrid'
-import { EmbeddedCast } from 'components/EmbeddedCast'
+import { AuthKitProvider } from '@farcaster/auth-kit'
+import '@farcaster/auth-kit/styles.css'
+
+import { Footer } from 'components/Footer'
+import { Main } from 'components/Main'
 import { UserBar } from 'components/UserBar'
-import { clientsList } from 'helpers/clientLinks'
+import { Uses } from 'components/Uses'
 import { useStateStore } from 'helpers/stores/zustand'
-import { userCastUrl } from 'helpers/userCast'
+
+const config = {
+  rpcUrl: import.meta.env['VITE_OPTIMISM_RPC_URL'] ?? '',
+  domain: 'y0bcaster.artlu.xyz',
+  siweUri: 'https://y0bcaster.artlu.xyz',
+}
 
 export default function () {
-  const [showMobile, setShowMobile] = useState(isMobile)
-
-  const { selected } = useStateStore()
+  const { setShowMobile } = useStateStore()
 
   useEffect(() => {
     setShowMobile(isMobile)
   }, [isMobile])
 
   return (
-    <>
-      <UserBar showMobile={showMobile} setShowMobile={setShowMobile} />
-      <div className="container mx-auto max-w-prose p-10 prose">
-        <ClientsGrid
-          gridItems={clientsList.filter(
-            (c) =>
-              c.type === (showMobile ? 'mobile' : 'desktop') &&
-              selected.includes(c.id)
-          )}
-        />
-      </div>
-      <EmbeddedCast url={userCastUrl()} />
-    </>
+    <AuthKitProvider config={config}>
+      <UserBar />
+
+      <Switch>
+        <Route path="/" component={Main} />
+        <Route path="/uses" component={Uses} />
+
+        {/* Default route in a switch */}
+        <Route>404: No such page!</Route>
+      </Switch>
+
+      <Footer />
+    </AuthKitProvider>
   )
 }

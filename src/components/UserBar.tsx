@@ -1,18 +1,15 @@
-import { Dispatch, FC, SetStateAction } from 'preact/compat'
-
 import {
   RiComputerFill,
   RiComputerLine,
   RiSmartphoneFill,
   RiSmartphoneLine,
 } from '@remixicon/react'
+import { useStateStore } from 'helpers/stores/zustand'
 import { SelectorModal } from './SelectorModal'
 
-interface UserBarProps {
-  showMobile: boolean
-  setShowMobile: Dispatch<SetStateAction<boolean>>
-}
-export const UserBar: FC<UserBarProps> = ({ showMobile, setShowMobile }) => {
+export const UserBar = () => {
+  const { showMobile, setShowMobile } = useStateStore()
+
   const username = 'y0b'
   return (
     <div className="navbar bg-base-100">
