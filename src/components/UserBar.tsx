@@ -7,6 +7,8 @@ import {
 } from '@remixicon/react'
 import { Link, useLocation } from 'wouter'
 
+import { useProfile } from '@farcaster/auth-kit'
+
 import { useStateStore } from 'helpers/stores/zustand'
 import { SelectorModal } from './SelectorModal'
 
@@ -14,9 +16,12 @@ export const UserBar = () => {
   const [location] = useLocation()
   const isBaseUrl = location === '/'
 
+  const { profile } = useProfile()
+
   const { showMobile, setShowMobile } = useStateStore()
 
-  const username = 'y0b'
+  const username = profile?.username || 'y0b'
+  const pfpUrl = profile?.pfpUrl || 'https://i.imgur.com/jHTn4Qp.jpg'
 
   return (
     <div className="navbar bg-base-100">
@@ -32,15 +37,12 @@ export const UserBar = () => {
           <div role="button" className="btn btn-ghost btn-circle avatar mx-1">
             <div className="w-24 rounded-full">
               <a
-                href={'https://seemore.tv/free/fc/y0b'}
+                href={`https://seemore.tv/free/fc/${username}`}
                 alt="profile"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
-                  src={'https://i.imgur.com/jHTn4Qp.jpg'}
-                  alt={`@${username}`}
-                />
+                <img src={pfpUrl} alt={`@${username}`} />
               </a>
             </div>
           </div>
