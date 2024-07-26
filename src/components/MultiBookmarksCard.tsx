@@ -33,23 +33,20 @@ export const MultiBookmarksCard = () => {
   const increment = () => setN((n) => n + 1)
   const decrement = () => setN((n) => n - 1)
 
-  const maxN = data?.bookmarks.length || 0
+  const maxN = data?.bookmarks.length || 10
   const url = userCastUrl({ isAuthenticated, data, n })
 
   return (
     <>
       <div className="container mx-auto flex justify-center">
         <div className="artboard phone-5 overflow-auto">
-          <figure>
-            <EmbeddedCast url={url} />
-          </figure>
           {maxN ? (
             <div className="card-body card-compact">
               <div className="card-actions justify-center">
                 <a
                   className="btn btn-circle"
                   disabled={n === 1}
-                  onClick={() =>setN(1)}
+                  onClick={() => setN(1)}
                 >
                   ❮❮
                 </a>
@@ -80,6 +77,9 @@ export const MultiBookmarksCard = () => {
               </div>
             </div>
           ) : null}
+          <figure>
+            <EmbeddedCast url={url} />
+          </figure>
         </div>
       </div>
     </>
