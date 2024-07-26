@@ -33,42 +33,47 @@ export const MultiBookmarksCard = () => {
   const increment = () => setN((n) => n + 1)
   const decrement = () => setN((n) => n - 1)
 
-  const maxN = data?.bookmarks.length
+  const maxN = data?.bookmarks.length ?? 0
   const url = userCastUrl({ isAuthenticated, data, n })
 
   return (
     <>
       <div className="container mx-auto flex justify-center">
-        <div className="artboard phone-5 overflow-auto">
+        <div className="card bg-base-100 w-96 border-base-300 border-2 ">
+          <figure>
+            <div className="artboard phone-5 overflow-auto">
+              <EmbeddedCast url={url} />
+            </div>
+          </figure>
           {maxN ? (
             <div className="card-body card-compact">
               <div className="card-actions justify-center">
                 <a
-                  className="btn btn-circle"
+                  className="btn btn-circle btn-sm"
                   disabled={n === 1}
                   onClick={() => setN(1)}
                 >
                   ❮❮
                 </a>
                 <a
-                  className="btn btn-circle"
+                  className="btn btn-circle btn-sm"
                   disabled={n === 1}
                   onClick={decrement}
                 >
                   ❮
                 </a>
-                <button className="btn">
+                <button className="btn btn-sm">
                   {n} of {maxN}
                 </button>
                 <a
-                  className="btn btn-circle"
+                  className="btn btn-circle btn-sm"
                   disabled={n === maxN}
                   onClick={increment}
                 >
                   ❯
                 </a>
                 <a
-                  className="btn btn-circle"
+                  className="btn btn-circle btn-sm"
                   disabled={n === maxN}
                   onClick={() => setN(maxN)}
                 >
@@ -77,9 +82,6 @@ export const MultiBookmarksCard = () => {
               </div>
             </div>
           ) : null}
-          <figure>
-            <EmbeddedCast url={url} />
-          </figure>
         </div>
       </div>
     </>
