@@ -1,45 +1,12 @@
-import { useProfile } from '@farcaster/auth-kit'
-import { useEffect, useState } from 'preact/hooks'
+import { DecentBookmarksResponse } from './types'
 
-interface DecentBookmark {
-  timestamp: number
-  fid: number
-  username: string
-  hash: string
-  tags?: string[]
+interface UserCastUrlProps {
+  isAuthenticated: boolean
+  data: DecentBookmarksResponse | undefined
+  n: number
 }
-
-interface DecentBookmarksRequest {
-  fid: number
-}
-
-interface DecentBookmarksResponse {
-  bookmarks: DecentBookmark[]
-}
-
-export const userCastUrl = () => {
-  const [data, setData] = useState<DecentBookmarksResponse | undefined>(
-    undefined
-  )
-
-  const {
-    isAuthenticated,
-    profile: { fid },
-  } = useProfile()
-
-  useEffect(() => {
-    async function fetchData(req: DecentBookmarksRequest) {
-      const response = await fetch('/getDecentBookmarks', {
-        method: 'POST',
-        body: JSON.stringify(req),
-      })
-      setData((await response.json()) as DecentBookmarksResponse)
-    }
-    if (fid) {
-      const req: DecentBookmarksRequest = { fid }
-      fetchData(req)
-    }
-  }, [fid])
+export const userCastUrl = (props: UserCastUrlProps): string => {
+  const { isAuthenticated, data, n } = props
 
   if (!isAuthenticated) return import.meta.env['VITE_DEFAULT_EMBED']
 
@@ -48,7 +15,8 @@ export const userCastUrl = () => {
 
   const latestBookmark = data.bookmarks.sort(
     (a, b) => b.timestamp - a.timestamp
-  )[0]
+  )[n - 1] // display 1-indexed to user, use 0-indexed in data structure
+
   const { username, hash } = latestBookmark
   return `https://warpcast.com/${username}/${hash.slice(0, 10)}`
 }

@@ -1,8 +1,7 @@
 import { clientsList } from 'helpers/clientLinks'
 import { useStateStore } from 'helpers/stores/zustand'
-import { userCastUrl } from 'helpers/userCast'
 import { ClientsGrid } from './ClientsGrid'
-import { EmbeddedCast } from './EmbeddedCast'
+import { MultiBookmarksCard } from './MultiBookmarksCard'
 
 export const Main = () => {
   const { selected, showMobile } = useStateStore()
@@ -18,7 +17,7 @@ export const Main = () => {
           )}
         />
       </div>
-      <EmbeddedCast url={userCastUrl()} />{' '}
+      <MultiBookmarksCard />
     </>
   )
 }

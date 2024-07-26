@@ -11,7 +11,6 @@ export const SelectorModal: React.FC<SelectorModalProps> = (props) => {
   const { selected, select, deselect } = useStateStore()
 
   const handleChange = (id: number) => {
-    console.log(id)
     if (selected.includes(id)) {
       deselect(id)
     } else {

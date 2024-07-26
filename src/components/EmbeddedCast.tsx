@@ -5,13 +5,7 @@ interface EmbeddedCastProps {
   url: string
 }
 export const EmbeddedCast: React.FC<EmbeddedCastProps> = (props) => {
-  const { url: href } = props
+  const { url } = props
 
-  return (
-    <div className="container mx-auto flex justify-center">
-      <div className="artboard phone-2 overflow-auto">
-        <FarcasterEmbed url={href} />
-      </div>
-    </div>
-  )
+  return <FarcasterEmbed url={url} />
 }
