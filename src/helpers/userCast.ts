@@ -41,8 +41,10 @@ export const userCastUrl = () => {
     }
   }, [fid])
 
+  if (!isAuthenticated) return import.meta.env['VITE_DEFAULT_EMBED']
+
   if (!data || data.bookmarks.length === 0)
-    return 'https://warpcast.com/y0b/0x3e3b437b'
+    return import.meta.env['VITE_FALLBACK_EMBED']
 
   const latestBookmark = data.bookmarks.sort(
     (a, b) => b.timestamp - a.timestamp

@@ -9,13 +9,8 @@ import { Footer } from 'components/Footer'
 import { Main } from 'components/Main'
 import { UserBar } from 'components/UserBar'
 import { Uses } from 'components/Uses'
+import { config } from 'helpers/config'
 import { useStateStore } from 'helpers/stores/zustand'
-
-const config = {
-  rpcUrl: import.meta.env['VITE_OPTIMISM_RPC_URL'] ?? '',
-  domain: 'y0bcaster.artlu.xyz',
-  siweUri: 'https://y0bcaster.artlu.xyz',
-}
 
 export default function () {
   const { setShowMobile } = useStateStore()

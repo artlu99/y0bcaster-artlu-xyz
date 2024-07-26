@@ -20,8 +20,8 @@ export const UserBar = () => {
 
   const { showMobile, setShowMobile } = useStateStore()
 
-  const username = profile?.username || 'y0b'
-  const pfpUrl = profile?.pfpUrl || 'https://i.imgur.com/jHTn4Qp.jpg'
+  const username = profile?.username || import.meta.env['VITE_DEFAULT_USERNAME']
+  const pfpUrl = profile?.pfpUrl || import.meta.env['VITE_DEFAULT_PFPURL']
 
   return (
     <div className="navbar bg-base-100">
