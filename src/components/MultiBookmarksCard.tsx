@@ -45,16 +45,18 @@ export const MultiBookmarksCard = () => {
               <EmbeddedCast url={url} />
             </div>
           </figure>
-          {maxN ? (
+          {maxN > 1 ? (
             <div className="card-body card-compact">
               <div className="card-actions justify-center">
-                <a
-                  className="btn btn-circle btn-sm"
-                  disabled={n === 1}
-                  onClick={() => setN(1)}
-                >
-                  ❮❮
-                </a>
+                {maxN > 2 ? (
+                  <a
+                    className="btn btn-circle btn-sm"
+                    disabled={n === 1}
+                    onClick={() => setN(1)}
+                  >
+                    ❮❮
+                  </a>
+                ) : null}
                 <a
                   className="btn btn-circle btn-sm"
                   disabled={n === 1}
@@ -72,13 +74,15 @@ export const MultiBookmarksCard = () => {
                 >
                   ❯
                 </a>
-                <a
-                  className="btn btn-circle btn-sm"
-                  disabled={n === maxN}
-                  onClick={() => setN(maxN)}
-                >
-                  ❯❯
-                </a>
+                {maxN > 2 ? (
+                  <a
+                    className="btn btn-circle btn-sm"
+                    disabled={n === maxN}
+                    onClick={() => setN(maxN)}
+                  >
+                    ❯❯
+                  </a>
+                ) : null}
               </div>
             </div>
           ) : null}
