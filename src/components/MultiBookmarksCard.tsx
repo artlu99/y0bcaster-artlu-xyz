@@ -33,7 +33,7 @@ export const MultiBookmarksCard = () => {
   const increment = () => setN((n) => n + 1)
   const decrement = () => setN((n) => n - 1)
 
-  const maxN = data?.bookmarks.length || 10
+  const maxN = data?.bookmarks.length
   const url = userCastUrl({ isAuthenticated, data, n })
 
   return (
