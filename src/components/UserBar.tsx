@@ -48,7 +48,7 @@ export const UserBar = () => {
           </div>
         ) : (
           <Link className="link link-hover" href="/">
-            <div className="tooltip" data-tip="Home">
+            <div className="tooltip tooltip-bottom" data-tip="Home">
               <RiHome2Line />
             </div>
           </Link>
