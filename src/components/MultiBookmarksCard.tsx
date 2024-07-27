@@ -51,41 +51,43 @@ export const MultiBookmarksCard = () => {
           {maxN > 1 ? (
             <div className="card-body card-compact">
               <div className="card-actions justify-center">
-                {maxN > 2 ? (
+                <div className="join">
+                  {maxN > 2 ? (
+                    <a
+                      className="btn join-item"
+                      disabled={n === 1}
+                      onClick={() => setN(1)}
+                    >
+                      ❮❮
+                    </a>
+                  ) : null}
                   <a
-                    className="btn btn-circle btn-sm"
+                    className="btn join-item"
                     disabled={n === 1}
-                    onClick={() => setN(1)}
+                    onClick={decrement}
                   >
-                    ❮❮
+                    ❮
                   </a>
-                ) : null}
-                <a
-                  className="btn btn-circle btn-sm"
-                  disabled={n === 1}
-                  onClick={decrement}
-                >
-                  ❮
-                </a>
-                <button className="btn btn-sm">
-                  {n} of {maxN}
-                </button>
-                <a
-                  className="btn btn-circle btn-sm"
-                  disabled={n === maxN}
-                  onClick={increment}
-                >
-                  ❯
-                </a>
-                {maxN > 2 ? (
+                  <button className="btn join-item">
+                    {n} of {maxN}
+                  </button>
                   <a
-                    className="btn btn-circle btn-sm"
+                    className="btn join-item"
                     disabled={n === maxN}
-                    onClick={() => setN(maxN)}
+                    onClick={increment}
                   >
-                    ❯❯
+                    ❯
                   </a>
-                ) : null}
+                  {maxN > 2 ? (
+                    <a
+                      className="btn join-item"
+                      disabled={n === maxN}
+                      onClick={() => setN(maxN)}
+                    >
+                      ❯❯
+                    </a>
+                  ) : null}
+                </div>
               </div>
             </div>
           ) : null}
