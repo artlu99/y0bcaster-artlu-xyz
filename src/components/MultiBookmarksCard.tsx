@@ -28,6 +28,7 @@ export const MultiBookmarksCard = () => {
       const req: DecentBookmarksRequest = { fid }
       fetchData(req)
     } else {
+      setN(1)
       setData(undefined)
     }
   }, [fid, isAuthenticated])
