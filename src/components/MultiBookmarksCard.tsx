@@ -44,7 +44,7 @@ export const MultiBookmarksCard = () => {
       <div className="container mx-auto flex justify-center">
         <div className="card bg-base-100 w-96 border-base-300 border-2 ">
           <figure>
-            <div className="artboard phone-5 overflow-auto">
+            <div className="artboard phone-3 overflow-auto">
               <EmbeddedCast url={url} />
             </div>
           </figure>
