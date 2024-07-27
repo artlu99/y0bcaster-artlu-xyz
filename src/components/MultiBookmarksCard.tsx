@@ -24,11 +24,13 @@ export const MultiBookmarksCard = () => {
       })
       setData((await response.json()) as DecentBookmarksResponse)
     }
-    if (fid) {
+    if (isAuthenticated && fid) {
       const req: DecentBookmarksRequest = { fid }
       fetchData(req)
+    } else {
+      setData(undefined)
     }
-  }, [fid])
+  }, [fid, isAuthenticated])
 
   const increment = () => setN((n) => n + 1)
   const decrement = () => setN((n) => n - 1)
