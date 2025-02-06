@@ -1,43 +1,42 @@
-import { useProfile } from '@farcaster/auth-kit'
-import { useEffect, useState } from 'preact/hooks'
-
-import { DecentBookmarksRequest, DecentBookmarksResponse } from 'helpers/types'
-import { userCastUrl } from 'helpers/userCast'
-import { EmbeddedCast } from './EmbeddedCast'
+import { useProfile } from "@farcaster/auth-kit";
+import { DecentBookmarksRequest, DecentBookmarksResponse } from "helpers/types";
+import { userCastUrl } from "helpers/userCast";
+import { useEffect, useState } from "preact/hooks";
+import { EmbeddedCast } from "./EmbeddedCast";
 
 export const MultiBookmarksCard = () => {
-  const [n, setN] = useState(1)
+  const [n, setN] = useState(1);
   const [data, setData] = useState<DecentBookmarksResponse | undefined>(
     undefined
-  )
+  );
 
   const {
     isAuthenticated,
     profile: { fid },
-  } = useProfile()
+  } = useProfile();
 
   useEffect(() => {
     async function fetchData(req: DecentBookmarksRequest) {
-      const response = await fetch('/getDecentBookmarks', {
-        method: 'POST',
+      const response = await fetch("/getDecentBookmarks", {
+        method: "POST",
         body: JSON.stringify(req),
-      })
-      setData((await response.json()) as DecentBookmarksResponse)
+      });
+      setData((await response.json()) as DecentBookmarksResponse);
     }
     if (isAuthenticated && fid) {
-      const req: DecentBookmarksRequest = { fid }
-      fetchData(req)
+      const req: DecentBookmarksRequest = { fid };
+      fetchData(req);
     } else {
-      setN(1)
-      setData(undefined)
+      setN(1);
+      setData(undefined);
     }
-  }, [fid, isAuthenticated])
+  }, [fid, isAuthenticated]);
 
-  const increment = () => setN((n) => n + 1)
-  const decrement = () => setN((n) => n - 1)
+  const increment = () => setN((n) => n + 1);
+  const decrement = () => setN((n) => n - 1);
 
-  const maxN = data?.bookmarks.length ?? 0
-  const url = userCastUrl({ isAuthenticated, data, n })
+  const maxN = data?.bookmarks.length ?? 0;
+  const url = userCastUrl({ isAuthenticated, data, n });
 
   return (
     <>
@@ -54,7 +53,7 @@ export const MultiBookmarksCard = () => {
                 <div className="join">
                   {maxN > 2 ? (
                     <a
-                      className={`btn join-item ${n === 1 ? 'disabled' : ''}`}
+                      className={`btn join-item ${n === 1 ? "disabled" : ""}`}
                       onClick={
                         n === 1 ? (e) => e.preventDefault() : () => setN(1)
                       }
@@ -63,7 +62,7 @@ export const MultiBookmarksCard = () => {
                     </a>
                   ) : null}
                   <a
-                    className={`btn join-item ${n === 1 ? 'disabled' : ''}`}
+                    className={`btn join-item ${n === 1 ? "disabled" : ""}`}
                     onClick={n === 1 ? (e) => e.preventDefault() : decrement}
                   >
                     ❮
@@ -72,14 +71,16 @@ export const MultiBookmarksCard = () => {
                     {n} of {maxN}
                   </button>
                   <a
-                    className={`btn join-item ${n === maxN ? 'disabled' : ''}`}
+                    className={`btn join-item ${n === maxN ? "disabled" : ""}`}
                     onClick={n === maxN ? (e) => e.preventDefault() : increment}
                   >
                     ❯
                   </a>
                   {maxN > 2 ? (
                     <a
-                      className={`btn join-item ${n === maxN ? 'disabled' : ''}`}
+                      className={`btn join-item ${
+                        n === maxN ? "disabled" : ""
+                      }`}
                       onClick={
                         n === maxN
                           ? (e) => e.preventDefault()
@@ -96,5 +97,5 @@ export const MultiBookmarksCard = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};

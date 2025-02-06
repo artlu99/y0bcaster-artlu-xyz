@@ -1,15 +1,15 @@
 export interface DecentBookmark {
-  timestamp: number
-  fid: number
-  username: string
-  hash: string
-  tags?: string[]
+  timestamp: number;
+  fid: number;
+  username: string;
+  hash: string;
+  tags?: string[];
 }
 
 export interface DecentBookmarksRequest {
-  fid: number
+  fid: number;
 }
 
 export interface DecentBookmarksResponse {
-  bookmarks: DecentBookmark[]
+  bookmarks: DecentBookmark[];
 }

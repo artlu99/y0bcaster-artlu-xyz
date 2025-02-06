@@ -1,10 +1,10 @@
-import { clientsList } from 'helpers/clientLinks'
-import { useStateStore } from 'helpers/stores/zustand'
-import { ClientsGrid } from './ClientsGrid'
-import { MultiBookmarksCard } from './MultiBookmarksCard'
+import { clientsList } from "helpers/clientLinks";
+import { useStateStore } from "helpers/stores/zustand";
+import { ClientsGrid } from "./ClientsGrid";
+import { MultiBookmarksCard } from "./MultiBookmarksCard";
 
 export const Main = () => {
-  const { selected, showMobile } = useStateStore()
+  const { selected, showMobile } = useStateStore();
 
   return (
     <>
@@ -12,12 +12,12 @@ export const Main = () => {
         <ClientsGrid
           gridItems={clientsList.filter(
             (c) =>
-              c.type === (showMobile ? 'mobile' : 'desktop') &&
+              c.type === (showMobile ? "mobile" : "desktop") &&
               selected.includes(c.id)
           )}
         />
       </div>
       <MultiBookmarksCard />
     </>
-  )
-}
+  );
+};

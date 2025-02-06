@@ -4,24 +4,25 @@ import {
   RiHome2Line,
   RiSmartphoneFill,
   RiSmartphoneLine,
-} from '@remixicon/react'
-import { Link, useLocation } from 'wouter'
+} from "@remixicon/react";
+import { Link, useLocation } from "wouter";
 
-import { useProfile } from '@farcaster/auth-kit'
+import { useProfile } from "@farcaster/auth-kit";
 
-import { useStateStore } from 'helpers/stores/zustand'
-import { SelectorModal } from './SelectorModal'
+import { useStateStore } from "helpers/stores/zustand";
+import { SelectorModal } from "./SelectorModal";
 
 export const UserBar = () => {
-  const [location] = useLocation()
-  const isBaseUrl = location === '/'
+  const [location] = useLocation();
+  const isBaseUrl = location === "/";
 
-  const { profile } = useProfile()
+  const { profile } = useProfile();
 
-  const { showMobile, setShowMobile } = useStateStore()
+  const { showMobile, setShowMobile } = useStateStore();
 
-  const username = profile?.username || import.meta.env['VITE_DEFAULT_USERNAME']
-  const pfpUrl = profile?.pfpUrl || import.meta.env['VITE_DEFAULT_PFPURL']
+  const username =
+    profile?.username || import.meta.env["VITE_DEFAULT_USERNAME"];
+  const pfpUrl = profile?.pfpUrl || import.meta.env["VITE_DEFAULT_PFPURL"];
 
   return (
     <div className="navbar bg-base-100">
@@ -65,5 +66,5 @@ export const UserBar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

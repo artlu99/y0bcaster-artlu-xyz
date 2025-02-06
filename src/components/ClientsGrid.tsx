@@ -1,15 +1,15 @@
-import { ClientGridItemProps } from 'helpers/clientLinks'
-import { useStateStore } from 'helpers/stores/zustand'
+import { ClientGridItemProps } from "helpers/clientLinks";
+import { useStateStore } from "helpers/stores/zustand";
 
-const clientPfpSquareSize = 80
+const clientPfpSquareSize = 80;
 
 interface ClientsGridProps {
-  gridItems: ClientGridItemProps[]
+  gridItems: ClientGridItemProps[];
 }
 export const ClientsGrid: React.FC<ClientsGridProps> = (props) => {
-  const { gridItems } = props
+  const { gridItems } = props;
 
-  const { last, setLast } = useStateStore()
+  const { last, setLast } = useStateStore();
 
   return (
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -41,5 +41,5 @@ export const ClientsGrid: React.FC<ClientsGridProps> = (props) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};

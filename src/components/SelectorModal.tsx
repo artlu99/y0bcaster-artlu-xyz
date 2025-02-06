@@ -1,29 +1,28 @@
-import { RiSettings2Line } from '@remixicon/react'
-
-import { clientsList } from 'helpers/clientLinks'
-import { useStateStore } from 'helpers/stores/zustand'
+import { RiSettings2Line } from "@remixicon/react";
+import { clientsList } from "helpers/clientLinks";
+import { useStateStore } from "helpers/stores/zustand";
 
 type SelectorModalProps = {
-  showMobile: boolean
-}
+  showMobile: boolean;
+};
 export const SelectorModal: React.FC<SelectorModalProps> = (props) => {
-  const { showMobile } = props
-  const { selected, select, deselect } = useStateStore()
+  const { showMobile } = props;
+  const { selected, select, deselect } = useStateStore();
 
   const handleChange = (id: number) => {
     if (selected.includes(id)) {
-      deselect(id)
+      deselect(id);
     } else {
-      select(id)
+      select(id);
     }
-  }
+  };
 
   return (
     <>
       <button
         onClick={() =>
           (
-            document.getElementById('selector_modal') as HTMLDialogElement
+            document.getElementById("selector_modal") as HTMLDialogElement
           ).showModal()
         }
       >
@@ -47,7 +46,7 @@ export const SelectorModal: React.FC<SelectorModalProps> = (props) => {
                 <tbody>
                   {clientsList
                     .filter(
-                      (c) => c.type === (showMobile ? 'mobile' : 'desktop')
+                      (c) => c.type === (showMobile ? "mobile" : "desktop")
                     )
                     .map((client) => (
                       <tr>
@@ -83,5 +82,5 @@ export const SelectorModal: React.FC<SelectorModalProps> = (props) => {
         </form>
       </dialog>
     </>
-  )
-}
+  );
+};

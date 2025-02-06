@@ -1,15 +1,13 @@
-import { Link, useLocation } from 'wouter'
-
-import { SignInButton, useProfile, useSignIn } from '@farcaster/auth-kit'
-
-import { RiGithubLine, RiTelegramLine, RiTwitterXLine } from '@remixicon/react'
+import { SignInButton, useProfile, useSignIn } from "@farcaster/auth-kit";
+import { RiGithubLine, RiTelegramLine, RiTwitterXLine } from "@remixicon/react";
+import { Link, useLocation } from "wouter";
 
 export const Footer = () => {
-  const [location] = useLocation()
-  const isBaseUrl = location === '/'
+  const [location] = useLocation();
+  const isBaseUrl = location === "/";
 
-  const { isAuthenticated } = useProfile()
-  const { signOut } = useSignIn({})
+  const { isAuthenticated } = useProfile();
+  const { signOut } = useSignIn({});
 
   return (
     <>
@@ -105,5 +103,5 @@ export const Footer = () => {
         </nav>
       </footer>
     </>
-  )
-}
+  );
+};

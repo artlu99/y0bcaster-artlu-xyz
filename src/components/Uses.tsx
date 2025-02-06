@@ -13,8 +13,8 @@ export const Uses = () => {
               rel="noreferrer"
             >
               Frontend Starter
-            </a>{' '}
-            by{' '}
+            </a>{" "}
+            by{" "}
             <a
               href="https://warpcast.com/farcasteradmin.eth"
               title="farcasteradmin.eth"
@@ -29,12 +29,12 @@ export const Uses = () => {
             <a
               href="https://github.com/pugson/react-farcaster-embed"
               title="react-farcaster-embed"
-              target={'_blank'}
+              target={"_blank"}
               rel="noreferrer"
             >
               react-farcaster-embed
-            </a>{' '}
-            by{' '}
+            </a>{" "}
+            by{" "}
             <a
               href="https://warpcast.com/pugson"
               title="pugson"
@@ -53,7 +53,7 @@ export const Uses = () => {
             >
               Zustand
             </a>
-            ,{' '}
+            ,{" "}
             <a
               href="https://github.com/molefrog/wouter"
               title="Wouter"
@@ -62,7 +62,7 @@ export const Uses = () => {
             >
               Wouter
             </a>
-            , and{' '}
+            , and{" "}
             <a
               href="https://remixicon.com"
               title="RemixIcons"
@@ -73,7 +73,7 @@ export const Uses = () => {
             </a>
           </li>
           <li>
-            backend:{' '}
+            backend:{" "}
             <a
               href="https://pages.cloudflare.com"
               title="Cloudflare Pages"
@@ -84,7 +84,7 @@ export const Uses = () => {
             </a>
           </li>
           <li>
-            Farcaster{' '}
+            Farcaster{" "}
             <a
               href="http://docs.farcaster.xyz/auth-kit/"
               title="AuthKit"
@@ -97,5 +97,5 @@ export const Uses = () => {
         </ul>
       </div>
     </>
-  )
-}
+  );
+};

@@ -1,14 +1,14 @@
-import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface ZustandState {
-  showMobile: boolean
-  setShowMobile: (showMobile: boolean) => void
-  last: number | undefined
-  setLast: (lastId: number) => void
-  selected: number[]
-  select: (id: number) => void
-  deselect: (id: number) => void
+  showMobile: boolean;
+  setShowMobile: (showMobile: boolean) => void;
+  last: number | undefined;
+  setLast: (lastId: number) => void;
+  selected: number[];
+  select: (id: number) => void;
+  deselect: (id: number) => void;
 }
 
 export const useStateStore = create<ZustandState>()(
@@ -24,6 +24,6 @@ export const useStateStore = create<ZustandState>()(
       deselect: (id) =>
         set((state) => ({ selected: state.selected.filter((i) => i !== id) })),
     }),
-    { name: 'zustandStore' }
+    { name: "zustandStore" }
   )
-)
+);

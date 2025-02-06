@@ -6,7 +6,6 @@
   "scripts": {
     "start": "vite",
     "build": "cross-env NODE_ENV=production tsc && vite build",
-    "lint": "biome check --write src",
     "preview": "yarn build && yarn vite preview"
   },
   "dependencies": {

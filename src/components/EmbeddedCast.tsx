@@ -1,11 +1,11 @@
-import { FarcasterEmbed } from 'react-farcaster-embed/dist/client'
-import 'react-farcaster-embed/dist/styles.css'
+import { FarcasterEmbed } from "react-farcaster-embed/dist/client";
+import "react-farcaster-embed/dist/styles.css";
 
 interface EmbeddedCastProps {
-  url: string
+  url: string;
 }
 export const EmbeddedCast: React.FC<EmbeddedCastProps> = (props) => {
-  const { url } = props
+  const { url } = props;
 
-  return <FarcasterEmbed url={url} />
-}
+  return <FarcasterEmbed url={url} />;
+};
