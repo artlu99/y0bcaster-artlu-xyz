@@ -1,13 +1,28 @@
 import { SignInButton, useProfile, useSignIn } from "@farcaster/auth-kit";
 import { RiGithubLine, RiTelegramLine, RiTwitterXLine } from "@remixicon/react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
+import { getLatestCommit } from "../lib/github";
 
 export const Footer = () => {
   const [location] = useLocation();
   const isBaseUrl = location === "/";
+  const [lastUpdated, setLastUpdated] = useState<string>();
 
   const { isAuthenticated } = useProfile();
   const { signOut } = useSignIn({});
+
+  useEffect(() => {
+    const fetchLastUpdate = async () => {
+      try {
+        setLastUpdated(await getLatestCommit("artlu99", "y0bcaster-artlu-xyz"));
+      } catch (error) {
+        console.error("Error fetching last update:", error);
+      }
+    };
+
+    fetchLastUpdate();
+  }, []);
 
   return (
     <>
@@ -67,9 +82,10 @@ export const Footer = () => {
             rel="noreferrer"
           >
             <p>
-              made by @artlu99
+              by @artlu99
               <br />
-              July 2024
+              july 2024
+              {lastUpdated && <span className="italic"> · last updated {lastUpdated}</span>}
             </p>
           </a>
         </aside>

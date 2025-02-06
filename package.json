@@ -12,6 +12,8 @@
     "@farcaster/auth-kit": "^0.6.0",
     "@remixicon/react": "^4.6.0",
     "buffer": "^6.0.3",
+    "date-fns": "^4.1.0",
+    "itty-fetcher": "^0.9.4",
     "preact": "^10.25.4",
     "react-device-detect": "^2.2.3",
     "react-farcaster-embed": "^1.8.9",
