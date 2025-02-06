@@ -78,7 +78,7 @@ export const Footer = () => {
         <nav className="md:place-self-center md:justify-self-end">
           <div className="grid grid-flow-col gap-4">
             <a
-              href="https://github.com/artlu99"
+              href="https://github.com/artlu99/y0bcaster-artlu-xyz"
               title="GH:artlu99"
               target="_blank"
               rel="noreferrer"
