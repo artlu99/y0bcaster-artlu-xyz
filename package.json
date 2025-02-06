@@ -6,8 +6,7 @@
   "scripts": {
     "start": "vite",
     "build": "cross-env NODE_ENV=production tsc && vite build",
-    "pretty": "prettier --check src",
-    "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
+    "lint": "biome check --write src",
     "preview": "yarn build && yarn vite preview"
   },
   "dependencies": {
@@ -23,25 +22,15 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@cloudflare/workers-types": "^4.20250204.0",
     "@preact/preset-vite": "^2.10.1",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.13.1",
-    "@typescript-eslint/eslint-plugin": "^8.23.0",
-    "@typescript-eslint/parser": "^8.23.0",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
     "daisyui": "^4.12.23",
-    "eslint": "^9.19.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-no-relative-import-paths": "^1.6.1",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "prettier": "^3.4.2",
     "rollup-plugin-visualizer": "^5.14.0",
     "tailwindcss": "^3.4.3",
     "ts-node": "^10.9.2",

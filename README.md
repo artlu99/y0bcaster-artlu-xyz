@@ -11,7 +11,7 @@ This template is to be used for frontend applications.
 - `vite` packager and devtools make building and development lightning fast
 - `tailwind-css` built-in with 'daisyui'
 - GitHub Actions that lint and check the code on pull requests
-- `prettier` and `eslint` configured, enabled and formatting your code on save
+- `biome` Rust-based replacement for `prettier` and `eslint`, format and lint your code instantaneously
 - List of recommended extensions for VSCode
 - It is important to keep the bundle small, so a `stats.html` file is generated on `yarn build` to visually show you the bundle size
 
