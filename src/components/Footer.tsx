@@ -21,7 +21,7 @@ export const Footer = () => {
               <a
                 className="link link-hover"
                 href="https://warpcast.com/artlu/0x732f2bd1"
-                alt="Decent Bookmarks"
+                title="Decent Bookmarks"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -64,7 +64,7 @@ export const Footer = () => {
           </div>
           <a
             href="https://far.quest/artlu"
-            alt="@artlu"
+            title="@artlu"
             target="_blank"
             rel="noreferrer"
           >
@@ -79,7 +79,7 @@ export const Footer = () => {
           <div className="grid grid-flow-col gap-4">
             <a
               href="https://github.com/artlu99"
-              alt="GH:artlu99"
+              title="GH:artlu99"
               target="_blank"
               rel="noreferrer"
             >
@@ -87,7 +87,7 @@ export const Footer = () => {
             </a>
             <a
               href="https://t.me/artlu99"
-              alt="TG:@artlu99"
+              title="TG:@artlu99"
               target="_blank"
               rel="noreferrer"
             >
@@ -95,7 +95,7 @@ export const Footer = () => {
             </a>
             <a
               href="https://x.com/artlu99"
-              alt="@artlu99"
+              title="@artlu99"
               target="_blank"
               rel="noreferrer"
             >

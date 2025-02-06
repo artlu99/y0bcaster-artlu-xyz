@@ -38,7 +38,7 @@ export const UserBar = () => {
             <div className="w-24 rounded-full">
               <a
                 href={`https://seemore.tv/free/fc/${username}`}
-                alt="profile"
+                title="profile"
                 target="_blank"
                 rel="noreferrer"
               >

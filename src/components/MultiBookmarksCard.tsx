@@ -54,17 +54,17 @@ export const MultiBookmarksCard = () => {
                 <div className="join">
                   {maxN > 2 ? (
                     <a
-                      className="btn join-item"
-                      disabled={n === 1}
-                      onClick={() => setN(1)}
+                      className={`btn join-item ${n === 1 ? 'disabled' : ''}`}
+                      onClick={
+                        n === 1 ? (e) => e.preventDefault() : () => setN(1)
+                      }
                     >
                       ❮❮
                     </a>
                   ) : null}
                   <a
-                    className="btn join-item"
-                    disabled={n === 1}
-                    onClick={decrement}
+                    className={`btn join-item ${n === 1 ? 'disabled' : ''}`}
+                    onClick={n === 1 ? (e) => e.preventDefault() : decrement}
                   >
                     ❮
                   </a>
@@ -72,17 +72,19 @@ export const MultiBookmarksCard = () => {
                     {n} of {maxN}
                   </button>
                   <a
-                    className="btn join-item"
-                    disabled={n === maxN}
-                    onClick={increment}
+                    className={`btn join-item ${n === maxN ? 'disabled' : ''}`}
+                    onClick={n === maxN ? (e) => e.preventDefault() : increment}
                   >
                     ❯
                   </a>
                   {maxN > 2 ? (
                     <a
-                      className="btn join-item"
-                      disabled={n === maxN}
-                      onClick={() => setN(maxN)}
+                      className={`btn join-item ${n === maxN ? 'disabled' : ''}`}
+                      onClick={
+                        n === maxN
+                          ? (e) => e.preventDefault()
+                          : () => setN(maxN)
+                      }
                     >
                       ❯❯
                     </a>

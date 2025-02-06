@@ -8,7 +8,7 @@ export const Uses = () => {
           <li>
             <a
               href="https://github.com/Borodutch/frontend-starter"
-              alt="frontend-starter"
+              title="frontend-starter"
               target="_blank"
               rel="noreferrer"
             >
@@ -17,7 +17,7 @@ export const Uses = () => {
             by{' '}
             <a
               href="https://warpcast.com/farcasteradmin.eth"
-              alt="farcasteradmin.eth"
+              title="farcasteradmin.eth"
               target="_blank"
               rel="noreferrer"
             >
@@ -28,7 +28,7 @@ export const Uses = () => {
           <li>
             <a
               href="https://github.com/pugson/react-farcaster-embed"
-              alt="react-farcaster-embed"
+              title="react-farcaster-embed"
               target={'_blank'}
               rel="noreferrer"
             >
@@ -37,7 +37,7 @@ export const Uses = () => {
             by{' '}
             <a
               href="https://warpcast.com/pugson"
-              alt="pugson"
+              title="pugson"
               target="_blank"
               rel="noreferrer"
             >
@@ -47,7 +47,7 @@ export const Uses = () => {
           <li>
             <a
               href="https://docs.pmnd.rs/zustand/getting-started/introduction"
-              alt="Zustand"
+              title="Zustand"
               target="_blank"
               rel="noreferrer"
             >
@@ -56,7 +56,7 @@ export const Uses = () => {
             ,{' '}
             <a
               href="https://github.com/molefrog/wouter"
-              alt="Wouter"
+              title="Wouter"
               target="_blank"
               rel="noreferrer"
             >
@@ -65,7 +65,7 @@ export const Uses = () => {
             , and{' '}
             <a
               href="https://remixicon.com"
-              alt="RemixIcons"
+              title="RemixIcons"
               target="_blank"
               rel="noreferrer"
             >
@@ -76,7 +76,7 @@ export const Uses = () => {
             backend:{' '}
             <a
               href="https://pages.cloudflare.com"
-              alt="Cloudflare Pages"
+              title="Cloudflare Pages"
               target="_blank"
               rel="noreferrer"
             >
@@ -87,7 +87,7 @@ export const Uses = () => {
             Farcaster{' '}
             <a
               href="http://docs.farcaster.xyz/auth-kit/"
-              alt="AuthKit"
+              title="AuthKit"
               target="_blank"
               rel="noreferrer"
             >
