@@ -68,14 +68,6 @@ export const clientsList: ClientGridItemProps[] = [
     type: "mobile",
   },
   {
-    id: 8,
-    title: "Wildcard",
-    url: "https://app.wildcard.lol",
-    pfpUrl:
-      "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/68657e2d-ded8-4bd2-bca2-03779668ac00/original",
-    type: "desktop",
-  },
-  {
     id: 10,
     title: "Firefly",
     url: "https://firefly.mask.social",
