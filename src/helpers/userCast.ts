@@ -1,4 +1,4 @@
-import { DecentBookmarksResponse } from "./types";
+import type { DecentBookmarksResponse } from "./types";
 
 interface UserCastUrlProps {
   isAuthenticated: boolean;

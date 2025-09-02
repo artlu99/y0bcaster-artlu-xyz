@@ -31,7 +31,7 @@ export const clientsList: ClientGridItemProps[] = [
   },
   {
     id: 6,
-    title: "BCBHShow Lite Client 🌟",
+    title: "Lite Client 🌟",
     url: "https://client-bcbhshow.artlu.xyz/",
     pfpUrl:
       "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9d483fd3-b92b-4bcb-c8f0-95791501d500/original",
@@ -61,7 +61,7 @@ export const clientsList: ClientGridItemProps[] = [
   },
   {
     id: 7,
-    title: "BCBHShow Lite Client 🌟",
+    title: "Lite Client 🌟",
     url: "https://client-bcbhshow.artlu.xyz/",
     pfpUrl:
       "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9d483fd3-b92b-4bcb-c8f0-95791501d500/original",
