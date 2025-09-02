@@ -9,16 +9,16 @@ export interface ClientGridItemProps {
 export const clientsList: ClientGridItemProps[] = [
   {
     id: 0,
-    title: "warpcast",
-    url: "https://warpcast.com/",
+    title: "farcaster",
+    url: "https://farcaster.xyz/",
     pfpUrl: "https://i.imgur.com/3d6fFAI.png",
     type: "desktop",
   },
   {
     id: 4,
-    title: "supercast",
-    url: "https://supercast.xyz/",
-    pfpUrl: "https://www.supercast.xyz/supercast-logo-black.png",
+    title: "merv",
+    url: "https://merv.fun/",
+    pfpUrl: "https://merv.fun/favicon/web-app-manifest-512x512.png",
     type: "desktop",
   },
   {
@@ -39,7 +39,7 @@ export const clientsList: ClientGridItemProps[] = [
   },
   {
     id: 1,
-    title: "Warpcast",
+    title: "Farcaster",
     url: "farcaster://",
     pfpUrl: "https://i.imgur.com/3d6fFAI.png",
     type: "mobile",
@@ -54,9 +54,9 @@ export const clientsList: ClientGridItemProps[] = [
   },
   {
     id: 2,
-    title: "far.quest",
-    url: "farquest://",
-    pfpUrl: "https://i.imgur.com/ZgW9WB7.jpg",
+    title: "Firefly",
+    url: "firefly://",
+    pfpUrl: "https://i.imgur.com/NfzIpwa.jpg",
     type: "mobile",
   },
   {
@@ -69,23 +69,9 @@ export const clientsList: ClientGridItemProps[] = [
   },
   {
     id: 10,
-    title: "Firefly",
-    url: "https://firefly.mask.social",
-    pfpUrl: "https://i.imgur.com/NfzIpwa.jpg",
-    type: "desktop",
-  },
-  {
-    id: 11,
-    title: "Firefly",
-    url: "firefly://",
-    pfpUrl: "https://i.imgur.com/NfzIpwa.jpg",
+    title: "far.quest",
+    url: "farquest://",
+    pfpUrl: "https://i.imgur.com/ZgW9WB7.jpg",
     type: "mobile",
-  },
-  {
-    id: 12,
-    title: "degencast",
-    url: "https://dev.degencast.wtf/",
-    pfpUrl: "https://i.imgur.com/qLrLl4y.png",
-    type: "desktop",
   },
 ];

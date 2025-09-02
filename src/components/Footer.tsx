@@ -33,7 +33,7 @@ export const Footer = () => {
               <h6 className="footer-title">Tech</h6>
               <a
                 className="link link-hover"
-                href="https://warpcast.com/artlu/0x732f2bd1"
+                href="https://github.com/artlu99/decent-bookmarks"
                 title="Decent Bookmarks"
                 target="_blank"
                 rel="noreferrer"
@@ -98,22 +98,6 @@ export const Footer = () => {
               rel="noreferrer"
             >
               <RiGithubLine />
-            </a>
-            <a
-              href="https://t.me/artlu99"
-              title="TG:@artlu99"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RiTelegramLine />
-            </a>
-            <a
-              href="https://x.com/artlu99"
-              title="@artlu99"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RiTwitterXLine size={22} />
             </a>
           </div>
         </nav>

@@ -18,5 +18,5 @@ export const userCastUrl = (props: UserCastUrlProps): string => {
   )[n - 1]; // display 1-indexed to user, use 0-indexed in data structure
 
   const { username, hash } = latestBookmark;
-  return `https://warpcast.com/${username}/${hash.slice(0, 10)}`;
+  return `https://farcaster.xyz/${username}/${hash.slice(0, 10)}`;
 };

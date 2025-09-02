@@ -16,7 +16,7 @@ export const Uses = () => {
             </a>{" "}
             by{" "}
             <a
-              href="https://warpcast.com/farcasteradmin.eth"
+              href="https://farcaster.xyz/farcasteradmin.eth"
               title="farcasteradmin.eth"
               target="_blank"
               rel="noreferrer"
@@ -36,7 +36,7 @@ export const Uses = () => {
             </a>{" "}
             by{" "}
             <a
-              href="https://warpcast.com/pugson"
+              href="https://farcaster.xyz/pugson"
               title="pugson"
               target="_blank"
               rel="noreferrer"
